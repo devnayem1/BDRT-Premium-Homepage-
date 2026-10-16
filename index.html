@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BDRT Holdings | Building Brands. Creating What's Next.</title>
+<meta name="description" content="BDRT Holdings is a growing ecosystem of businesses, ventures, brands and strategic relationships, including iMERGE Advertising, Involia, Academic Elements, VOXA House and VOXA.">
+<meta name="theme-color" content="#1c1a17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1a17;--ink2:#2a2723;--ivory:#f4f0e9;--paper:#fbf9f5;--stone:#8b867d;--line:rgba(28,26,23,.16);--brass:#b4915b;--serif:"Cormorant Garamond","Times New Roman",Georgia,serif;--sans:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--pad:clamp(20px,5vw,72px);--hh:76px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ivory);color:var(--ink);padding:10px 16px;z-index:200}.skip:focus{left:8px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.015em}
+h2{font-size:clamp(2.6rem,6.2vw,5.6rem)}
+.lbl{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:600}
+.dark .lbl{color:#b9b3a8}
+.wrap{padding:0 var(--pad)}
+section{position:relative}
+.ph{background:linear-gradient(135deg,#3a352e,#1c1a17);overflow:hidden;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 28px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;border:1px solid currentColor;transition:background .35s,color .35s,border-color .35s}
+.btn.solid{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.btn.solid:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn.ghost:hover{background:rgba(244,240,233,.14)}
+.btn.line:hover{background:var(--ink);color:var(--ivory)}
+/* header */
+header{position:fixed;inset:0 0 auto;height:var(--hh);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);color:var(--ivory);transition:background .4s,backdrop-filter .4s,height .4s}
+header.solid{background:rgba(28,26,23,.94);backdrop-filter:blur(10px);--hh:64px;height:64px}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.2em;line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.42em;font-weight:500;margin-top:4px;opacity:.8}
+nav ul{display:flex;gap:clamp(18px,2.6vw,40px);list-style:none}
+nav a{font-size:.84rem;letter-spacing:.06em;padding:8px 0;position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+nav a:hover::after,nav a:focus-visible::after{transform:scaleX(1)}
+.access{display:flex;gap:12px;align-items:center}
+.access a{font-size:.78rem;letter-spacing:.06em;padding:10px 16px;border:1px solid rgba(244,240,233,.4);transition:background .3s,color .3s}
+.access a:hover{background:var(--ivory);color:var(--ink)}
+.burger{display:none;width:48px;height:48px;background:none;border:0;cursor:pointer;position:relative;z-index:130}
+.burger span{position:absolute;left:12px;right:12px;height:1.5px;background:currentColor;transition:transform .35s,top .35s,opacity .2s}
+.burger span:nth-child(1){top:18px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:28px}
+.menu-open .burger span:nth-child(1){top:23px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:23px;transform:rotate(-45deg)}
+.menu-open header{z-index:130;background:none;backdrop-filter:none}
+.drawer{position:fixed;inset:0;background:var(--ink);color:var(--ivory);z-index:120;padding:110px var(--pad) 40px;display:flex;flex-direction:column;justify-content:space-between;transform:translateX(100%);visibility:hidden;transition:transform .5s cubic-bezier(.7,0,.2,1),visibility .5s}
+.menu-open .drawer{transform:none;visibility:visible}
+.drawer ul{list-style:none}
+.drawer li a{display:block;font-family:var(--serif);font-size:2.6rem;padding:6px 0;border-bottom:1px solid rgba(244,240,233,.12)}
+.drawer .sub{display:flex;gap:12px;flex-wrap:wrap}
+.drawer .sub a{padding:14px 20px;border:1px solid rgba(244,240,233,.35);font-size:.85rem;min-height:48px}
+/* hero */
+.hero{min-height:100svh;color:var(--ivory);display:grid;align-items:end;padding:calc(var(--hh) + 40px) var(--pad) clamp(40px,7vh,80px);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:-6% 0;z-index:-2;will-change:transform}
+.hero .bg img{object-position:50% 22%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,26,23,.55) 0%,rgba(28,26,23,.1) 35%,rgba(28,26,23,.88) 100%),linear-gradient(90deg,rgba(28,26,23,.55),transparent 65%)}
+.hero h1{font-size:clamp(3.4rem,10.5vw,10rem);max-width:11ch;line-height:.92;margin:18px 0 28px}
+.hero h1 span{display:block;font-style:italic;font-weight:400;color:#e5d3b3}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.hero p.sub{max-width:34ch;font-size:1.05rem;color:#e8e2d6}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero .tag{border-left:1px solid rgba(244,240,233,.4);padding-left:20px;font-size:.85rem;max-width:26ch;color:#ddd6c9}
+.hero .tag b{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--ivory);margin-bottom:4px}
+.in{opacity:0;transform:translateY(24px);animation:in 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.in:nth-child(2){animation-delay:.15s}.in:nth-child(3){animation-delay:.3s}
+@keyframes in{to{opacity:1;transform:none}}
+/* intro */
+.intro{padding:clamp(90px,13vw,180px) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;row-gap:clamp(40px,6vw,80px)}
+.intro .lbl{grid-column:1/13}
+.intro h2{grid-column:1/11;max-width:15ch;margin-top:-10px}
+.ab-img{grid-column:1/6;position:relative;padding-bottom:14%}
+.ab-img .a{aspect-ratio:4/5}
+.ab-img .b{position:absolute;right:-18%;bottom:0;width:52%;aspect-ratio:1/1;border:8px solid var(--paper)}
+.intro .copy{grid-column:7/13;align-self:center}
+.intro .copy>p{font-size:1.12rem;max-width:46ch;margin-bottom:18px}
+.intro .copy>p.s2{color:#5c5750;font-size:1rem}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin:36px 0 40px;border-top:1px solid var(--line)}
+.pl div{padding:20px 0;border-bottom:1px solid var(--line)}
+.pl dt{font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.pl dd{font-size:.88rem;color:#5c5750;margin-top:6px;line-height:1.5}
+/* ecosystem */
+.eco{background:var(--ink);color:var(--ivory);padding:clamp(80px,11vw,150px) 0}
+.eco-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:60px}
+.eco-head h2{max-width:13ch}
+.eco-head p{max-width:30ch;color:#b9b3a8}
+.eco-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,6vw,100px);align-items:start}
+.eco-view{position:sticky;top:90px;aspect-ratio:4/5;max-height:78vh;width:100%}
+.eco-view img{position:absolute;inset:0;transition:opacity .6s}
+.eco-list{list-style:none;border-top:1px solid rgba(244,240,233,.18)}
+.eco-list li{border-bottom:1px solid rgba(244,240,233,.18)}
+.eco-list a{display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:baseline;padding:30px 0;transition:padding .4s,color .3s}
+.eco-list .n{font-size:.8rem;color:var(--brass);font-weight:600}
+.eco-list h3{font-size:clamp(2rem,4vw,3.6rem)}
+.eco-list p{grid-column:2;color:#b9b3a8;max-width:46ch;font-size:.97rem;margin-top:6px}
+.eco-list .go{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.eco-list a:hover,.eco-list a:focus-visible,.eco-list a.on{padding-left:14px}
+.eco-list a:hover .go,.eco-list a:focus-visible .go,.eco-list a.on .go{opacity:1}
+.eco-list a.on h3,.eco-list a:hover h3{color:#e5d3b3}
+.eco-list .m{display:none}
+.eco-list .soon{border-style:dashed}
+/* voxa */
+.voxa{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;color:var(--ivory);background:#14120f}
+.vcol{position:relative;display:flex;align-items:flex-end;padding:clamp(28px,5vw,72px);min-height:78vh;isolation:isolate;overflow:hidden}
+.vcol .ph{position:absolute;inset:0;z-index:-2}
+.vcol .ph img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.vcol:hover .ph img{transform:scale(1.04)}
+.vcol::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,18,15,.92),rgba(20,18,15,.05) 60%),linear-gradient(180deg,rgba(20,18,15,.55),transparent 30%)}
+.vcol h3{font-size:clamp(4rem,10vw,9rem);letter-spacing:.04em;font-weight:500;line-height:.9}
+.vcol h3 em{font-size:.38em;font-style:italic;display:block;letter-spacing:0;margin-bottom:10px;color:#e5d3b3}
+.vcol ul{list-style:none;margin:24px 0 28px;display:grid;gap:4px;font-size:.95rem;color:#e0d9cc}
+.vcol ul li::before{content:"";display:inline-block;width:22px;height:1px;background:var(--brass);margin-right:12px;vertical-align:middle}
+.voxa-title{position:absolute;z-index:5;top:clamp(90px,12vh,130px);left:50%;transform:translateX(-50%);text-align:center;width:min(92%,900px);pointer-events:none}
+.voxa-title h2{font-size:clamp(2.2rem,5vw,4.6rem);font-style:italic;font-weight:400}
+.voxa-title .lbl{color:#e5d3b3;margin-bottom:10px;display:block}
+/* work */
+.work{padding:clamp(80px,11vw,150px) var(--pad)}
+.work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.work-head h2{max-width:12ch}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(110px,13vw,190px);gap:clamp(14px,2vw,28px)}
+.item{position:relative;display:block;color:var(--ivory);overflow:hidden}
+.item .ph{position:absolute;inset:0}
+.item .ph img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.item:hover .ph img,.item:focus-visible .ph img{transform:scale(1.06)}
+.item::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,26,23,.85),transparent 55%)}
+.cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 24px}
+.cap span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#e5d3b3;font-weight:600}
+.cap h3{font-size:clamp(1.5rem,2.4vw,2.2rem);margin:4px 0}
+.cap p{font-size:.88rem;color:#e0d9cc;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .5s}
+.item:hover .cap p,.item:focus-visible .cap p{max-height:60px;opacity:1}
+.i1{grid-column:1/8;grid-row:span 3}.i2{grid-column:8/13;grid-row:span 2}.i3{grid-column:8/13;grid-row:span 2}.i4{grid-column:1/5;grid-row:span 2}.i5{grid-column:5/8;grid-row:span 2}
+/* story */
+.story{background:var(--ivory);padding:clamp(80px,11vw,150px) var(--pad)}
+.story-top{display:grid;grid-template-columns:7fr 5fr;gap:clamp(30px,6vw,100px);align-items:end}
+.story-top .ph{aspect-ratio:4/3}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(50px,8vw,100px);list-style:none;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:6px;height:1px;background:var(--stone)}
+.steps li{padding:34px 24px 0 0;position:relative}
+.steps li::before{content:"";position:absolute;top:0;left:0;width:13px;height:13px;border-radius:50%;background:var(--ivory);border:1px solid var(--ink)}
+.steps li:last-child::before{background:var(--brass);border-color:var(--brass)}
+.steps h3{font-size:1.9rem}
+.steps p{font-size:.92rem;color:#5c5750;margin-top:8px;max-width:26ch}
+/* future */
+.future{color:var(--ivory);padding:clamp(100px,14vw,200px) var(--pad);isolation:isolate;overflow:hidden}
+.future .ph{position:absolute;inset:0;z-index:-2}
+.future::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(28,26,23,.74)}
+.future .big{font-family:var(--serif);font-size:clamp(7rem,26vw,26rem);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(229,211,179,.75);margin-bottom:-.06em}
+.future h2{max-width:13ch}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px;list-style:none}
+.tags li{border:1px solid rgba(244,240,233,.4);padding:10px 20px;font-size:.88rem}
+/* connect */
+.connect{background:var(--ink);color:var(--ivory);padding:clamp(80px,11vw,150px) var(--pad);display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,7vw,110px);align-items:center}
+.connect h2{font-size:clamp(3rem,7vw,6.6rem);max-width:9ch}
+.connect .lead{margin:28px 0 36px;max-width:38ch;color:#cfc9bd;font-size:1.05rem}
+.connect .tags{margin-top:44px}
+.connect .tags li{font-size:.82rem;padding:8px 16px;color:#cfc9bd}
+form{display:grid;gap:26px;align-content:start}
+.f label,.f .lb{display:block;font-size:.8rem;letter-spacing:.08em;color:#b9b3a8;margin-bottom:4px}
+.f input,.f textarea{width:100%;background:none;border:0;border-bottom:1px solid rgba(244,240,233,.35);padding:10px 0;border-radius:0;min-height:48px;transition:border-color .3s}
+.f textarea{min-height:120px;resize:vertical}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--brass)}
+.err{display:none;color:#f0b4a4;font-size:.82rem;margin-top:4px}
+.f.bad .err{display:block}.f.bad input,.f.bad textarea{border-color:#f0b4a4}
+.ok{display:none;border:1px solid var(--brass);padding:16px 20px;color:#e5d3b3}
+.fp{background:var(--ivory);color:var(--ink);padding:clamp(28px,4.5vw,64px);position:relative}
+.fp::before{content:"";position:absolute;top:0;left:clamp(28px,4.5vw,64px);width:64px;height:3px;background:var(--brass)}
+.fp h3{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:8px}
+.fp .sm{color:#5c5750;font-size:.94rem;margin-bottom:34px;max-width:42ch}
+.fp .row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.fp .f label,.fp .f .lb{color:#5c5750}
+.fp .f input,.fp .f textarea{border-bottom-color:rgba(28,26,23,.35);color:var(--ink)}
+.fp .f input:focus,.fp .f textarea:focus{border-color:var(--brass)}
+.fp .err{color:#a3361f}.fp .f.bad input,.fp .f.bad textarea{border-color:#a3361f}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer;width:100%;height:100%}
+.chip span{display:block;padding:9px 16px;border:1px solid rgba(28,26,23,.3);font-size:.86rem;transition:background .25s,color .25s,border-color .25s}
+.chip input:checked+span{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.chip input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.btn.dk{background:var(--ink);color:var(--ivory);border-color:var(--ink);width:100%;justify-content:space-between;min-height:58px}
+.btn.dk:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn.dk b{font-weight:400;transition:transform .3s}.btn.dk:hover b{transform:translateX(6px)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.fmsg{display:none;color:#a3361f;font-size:.88rem}
+.done{display:none;padding:40px 0}
+.done h3{margin-bottom:10px}.done p{color:#5c5750;max-width:40ch;margin-bottom:24px}
+.fp.sent form,.fp.sent .hd{display:none}.fp.sent .done{display:block}
+/* footer */
+footer{background:#14120f;color:#cfc9bd;padding:clamp(60px,8vw,110px) var(--pad) 32px;overflow:hidden}
+.ft{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:clamp(48px,7vw,90px)}
+.tl2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.1;max-width:20ch;color:var(--ivory)}
+.up{width:56px;height:56px;border:1px solid rgba(244,240,233,.35);display:grid;place-items:center;color:var(--ivory);flex:none;transition:background .3s,color .3s}
+.up:hover{background:var(--ivory);color:var(--ink)}
+.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;border-top:1px solid rgba(244,240,233,.16);padding-top:40px}
+.fcols ul{list-style:none;display:grid;gap:4px}
+.fcols h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;font-weight:600}
+.fcols a{display:inline-block;padding:4px 0;transition:color .3s}.fcols a:hover{color:var(--ivory)}
+.fwordmark{font-family:var(--serif);font-size:clamp(5rem,26vw,24rem);line-height:.8;letter-spacing:.04em;color:transparent;-webkit-text-stroke:1px rgba(244,240,233,.22);font-weight:500;margin:clamp(40px,6vw,80px) 0 -.05em;user-select:none}
+.fbase{padding-top:24px;border-top:1px solid rgba(244,240,233,.16);font-size:.82rem;color:#8b867d;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.fcols{grid-template-columns:1fr 1fr}.ft{flex-direction:column-reverse}}
+/* slider */
+.hero .bg img.s{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease,transform 8s ease-out;transform:scale(1.06)}
+.hero .bg img.s.on{opacity:1;transform:scale(1)}
+.sl{position:absolute;right:var(--pad);top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px}
+.sl button{width:44px;height:44px;background:none;border:0;color:var(--ivory);cursor:pointer;font-size:1.1rem;opacity:.8;transition:opacity .3s}
+.sl button:hover{opacity:1}
+.sl .dt{width:44px;height:30px;position:relative}
+.sl .dt::after{content:"";position:absolute;left:50%;top:50%;width:2px;height:18px;margin:-9px 0 0 -1px;background:rgba(244,240,233,.4);transition:background .3s,height .3s,margin .3s}
+.sl .dt.on::after{background:var(--brass);height:30px;margin-top:-15px}
+/* dialog */
+dialog{border:0;background:var(--ink);color:var(--ivory);width:min(580px,92vw);max-height:90vh;overflow:auto;margin:auto;padding:clamp(28px,5vw,54px);position:fixed}
+dialog::backdrop{background:rgba(10,9,8,.72)}
+dialog .x{position:absolute;top:8px;right:8px;width:48px;height:48px;background:none;border:0;color:var(--ivory);font-size:1.6rem;cursor:pointer}
+dialog h3{font-size:clamp(2.2rem,5vw,3.2rem);margin:8px 0 14px}
+dialog p.d{color:#cfc9bd;margin-bottom:28px;max-width:44ch}
+dialog .note{font-size:.82rem;color:#b9b3a8;margin-top:6px}
+dialog .ok{margin-top:6px}
+/* responsive */
+@media(max-width:1100px){nav,.access{display:none}.burger{display:block}
+ .intro h2{grid-column:1/13}.ab-img{grid-column:1/13;max-width:560px;margin-right:12%}.intro .copy{grid-column:1/13}
+ .eco-grid{grid-template-columns:1fr}.eco-view{display:none}
+ .eco-list .m{display:block;grid-column:1/4;aspect-ratio:16/9;margin-top:18px}
+ .eco-list .go{opacity:1}
+ .story-top{grid-template-columns:1fr}.connect{grid-template-columns:1fr}}
+@media(max-width:800px){
+ .vcol::after{background:linear-gradient(0deg,rgba(20,18,15,.92),rgba(20,18,15,.05) 60%)}
+ .sl{top:auto;bottom:18px;transform:none;flex-direction:row;right:50%;margin-right:-110px}.sl .dt{width:30px}.sl .dt::after{width:18px;height:2px;margin:-1px 0 0 -9px}.sl .dt.on::after{width:30px;height:2px;margin:-1px 0 0 -15px}
+ .hero{padding-bottom:84px}
+ .voxa{grid-template-columns:1fr}.vcol{min-height:88svh}.voxa-title{position:relative;top:auto;left:auto;transform:none;padding:110px var(--pad) 40px;width:100%}
+ .voxa{display:block}.voxa-title{background:#14120f;color:var(--ivory)}
+ .mosaic{grid-template-columns:1fr;grid-auto-rows:auto}
+ .item{grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/5}.i1{aspect-ratio:1/1}
+ .item .cap p{max-height:none;opacity:1}
+ .pl{grid-template-columns:1fr}.ab-img .b{right:-10%}
+ .steps{grid-template-columns:1fr;gap:34px}.steps::before{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}
+ .steps li{padding:0 0 0 38px}
+ .hero h1{max-width:9ch}.hero .tag{display:none}.btn{width:100%;justify-content:center}.ctas{width:100%}
+ .eco-list a{grid-template-columns:30px 1fr}.eco-list .go{display:none}.eco-list p{grid-column:2}
+ .eco-list .m{grid-column:1/3}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.in{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="top">
+  <a class="logo" href="#home" aria-label="BDRT Holdings home">BDRT<small>HOLDINGS</small></a>
+  <nav aria-label="Main"><ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#businesses">Businesses</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#brands">Our Brands</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <div class="access"><a href="#client-login">Client Login</a><a href="#donor-portal">Donor Portal</a></div>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+</header>
+
+<div class="drawer" id="drawer" aria-label="Mobile menu">
+  <ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#businesses">Businesses</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#brands">Our Brands</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="sub"><a href="#client-login">Client Login</a><a href="#donor-portal">Donor Portal</a></div>
+</div>
+
+<main id="main">
+<section class="hero" id="home" aria-label="BDRT Holdings">
+  <div class="bg ph" id="slides"><img class="s on" fetchpriority="high" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=72" alt="VOXA House editorial fashion portrait"><img class="s" loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=2000&q=72" alt="VOXA brand fashion editorial"><img class="s" loading="lazy" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=2000&q=72" alt="Creator and media editorial"><img class="s" loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=72" alt="Premium fashion experience"><img class="s" loading="lazy" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=2000&q=72" alt="VOXA editorial portrait"></div>
+  <div class="sl" role="group" aria-label="Hero slideshow"><button id="slP" aria-label="Previous slide">&uarr;</button><div id="slD" style="display:flex;flex-direction:inherit"></div><button id="slN" aria-label="Next slide">&darr;</button><button id="slT" aria-label="Pause slideshow">&#10074;&#10074;</button></div>
+  <div>
+    <p class="lbl in" style="color:#e5d3b3">BDRT Holdings</p>
+    <h1 class="in">Building Brands. <span>Creating What's Next.</span></h1>
+    <div class="hero-row in">
+      <div>
+        <p class="sub">A growing ecosystem of businesses, ventures, brands and strategic relationships.</p>
+        <div class="ctas"><a class="btn solid" href="#businesses">Explore our ecosystem</a><a class="btn ghost" href="#portfolio">View our work</a></div>
+      </div>
+      <div class="tag"><b>VOXA &amp; VOXA House</b>The creative face of the BDRT ecosystem.</div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <p class="lbl">About BDRT</p>
+  <h2>More than a collection of businesses.</h2>
+  <div class="ab-img"><div class="ph a"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=70" alt="Modern commercial office interior"></div><div class="ph b"><img loading="lazy" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=70" alt="Team collaborating around a table"></div></div>
+  <div class="copy">
+    <p>BDRT Holdings is the organization behind a growing family of businesses across advertising, construction and development, education, community programs, fashion and media.</p>
+    <p class="s2">Whether it is a campaign, a development project or a creator's next step, the aim is the same: build brands and relationships with lasting commercial value.</p>
+    <dl class="pl"><div><dt>Creative</dt><dd>Brand, media and fashion ventures with a clear point of view.</dd></div><div><dt>Commercial</dt><dd>Advertising, development and project execution for real business needs.</dd></div><div><dt>Strategic</dt><dd>Relationships across industries that open new opportunities.</dd></div><div><dt>Expanding</dt><dd>New brands and ventures in development for 2027 and beyond.</dd></div></dl>
+    <a class="btn line" href="#businesses">Explore our businesses</a>
+  </div>
+</section>
+
+<section class="eco dark" id="businesses">
+  <div class="wrap">
+    <div class="eco-head"><h2>An ecosystem built to move ideas forward.</h2><p>Six organizations today, with room for more tomorrow.</p></div>
+    <div class="eco-grid">
+      <div class="eco-view ph" aria-hidden="true"><img id="ecoImg" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1100&q=70" alt=""></div>
+      <ul class="eco-list" id="ecoList">
+        <li><a href="#contact" data-img="photo-1504384308090-c894fdcc538d"><span class="n">01</span><h3>iMERGE Advertising</h3><span class="go">Explore</span><p>Advertising, branding, marketing and commercial creative services.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=70" alt="Creative studio at work"></div></a></li>
+        <li><a href="#contact" data-img="photo-1541888946425-d81bb19240f5"><span class="n">02</span><h3>Involia</h3><span class="go">Explore</span><p>Construction management, commercial development and project execution.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=70" alt="Construction site and structure"></div></a></li>
+        <li><a href="#contact" data-img="photo-1523050854058-8df90110c9f1"><span class="n">03</span><h3>Academic Elements</h3><span class="go">Explore</span><p>Nonprofit programs, education, workforce development and community impact.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70" alt="Graduates celebrating"></div></a></li>
+        <li><a href="#brands" data-img="photo-1483985988355-763728e1935b"><span class="n">04</span><h3>VOXA House</h3><span class="go">Explore</span><p>Creator development, fashion, media production, brand partnerships and premium experiences.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=70" alt="Fashion editorial scene"></div></a></li>
+        <li><a href="#brands" data-img="photo-1469334031218-e382a71b716b"><span class="n">05</span><h3>VOXA Brand</h3><span class="go">Explore</span><p>Personal branding, fashion, media and creative commercial opportunities.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=70" alt="Fashion portrait"></div></a></li>
+        <li class="soon"><a href="#future" data-img="photo-1486406146926-c627a92ad1ab"><span class="n">06</span><h3>Emerging Brands &amp; Ventures</h3><span class="go">Explore</span><p>Additional creative and commercial businesses being developed for 2027 and beyond.</p><div class="m ph"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=70" alt="Modern glass architecture"></div></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="voxa" id="brands" aria-label="VOXA and VOXA House">
+  <div class="voxa-title"><span class="lbl">Part of BDRT Holdings</span><h2>Where culture meets creativity.</h2></div>
+  <article class="vcol">
+    <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=72" alt="VOXA fashion editorial portrait"></div>
+    <div><h3><em>The brand</em>VOXA</h3>
+      <ul><li>Fashion</li><li>Personal branding</li><li>Media</li><li>Creative commercial opportunities</li></ul>
+      <a class="btn ghost" href="#contact">Discover VOXA</a></div>
+  </article>
+  <article class="vcol">
+    <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=72" alt="VOXA House creator and fashion editorial"></div>
+    <div><h3><em>The house</em>VOXA House</h3>
+      <ul><li>Creator development</li><li>Fashion</li><li>Media production</li><li>Brand partnerships</li><li>Premium experiences</li></ul>
+      <a class="btn ghost" href="#contact">Enter VOXA House</a></div>
+  </article>
+</section>
+
+<section class="work" id="portfolio">
+  <div class="work-head"><h2>Commercial work, creative impact.</h2><a class="btn line" href="#contact">Request full portfolio</a></div>
+  <div class="mosaic">
+    <a class="item i1" href="#contact"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=70" alt="Commercial building exterior"></div><div class="cap"><span>Development</span><h3>Commercial Development</h3><p>Project title and short description, ready to replace.</p></div></a>
+    <a class="item i2" href="#contact"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=70" alt="Fashion campaign"></div><div class="cap"><span>Media</span><h3>Fashion &amp; Media</h3><p>Project title and short description, ready to replace.</p></div></a>
+    <a class="item i3" href="#contact"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=70" alt="Branding workspace"></div><div class="cap"><span>Branding</span><h3>Brand Identity</h3><p>Project title and short description, ready to replace.</p></div></a>
+    <a class="item i4" href="#contact"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=70" alt="Modern commercial interior"></div><div class="cap"><span>Commercial</span><h3>Commercial Spaces</h3><p>Project title and short description, ready to replace.</p></div></a>
+    <a class="item i5" href="#contact"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70" alt="Community education event"></div><div class="cap"><span>Partnerships</span><h3>Community Programs</h3><p>Project title and short description, ready to replace.</p></div></a>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-top">
+    <div><p class="lbl">History &amp; vision</p><h2 style="margin-top:14px">Experience behind the vision.</h2></div>
+    <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=70" alt="Architectural plans and drawings"></div>
+  </div>
+  <ol class="steps">
+    <li><h3>Origins</h3><p>Where BDRT's story began. Add your founding story here.</p></li>
+    <li><h3>Growth</h3><p>Relationships and experience built across industries.</p></li>
+    <li><h3>Expansion</h3><p>A widening ecosystem of businesses and brands.</p></li>
+    <li><h3>What's next</h3><p>Long-term direction, with new ventures from 2027.</p></li>
+  </ol>
+</section>
+
+<section class="future dark" id="future">
+  <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=2000&q=70" alt="Abstract architectural lines"></div>
+  <div class="big" aria-hidden="true">2027+</div>
+  <h2>The portfolio is still growing.</h2>
+  <ul class="tags"><li>Emerging brands</li><li>Creative ventures</li><li>Commercial opportunities</li><li>Strategic expansion</li></ul>
+</section>
+
+<section class="connect" id="contact">
+  <div>
+    <h2>Let's build what's next.</h2>
+    <p class="lead">For business inquiries, partnerships, opportunities and strategic conversations.</p>
+    <a class="btn ghost" href="#businesses">View our businesses</a>
+    <ul class="tags"><li>Business inquiries</li><li>Partnerships</li><li>Opportunities</li><li>Strategic conversations</li></ul>
+  </div>
+  <div class="fp" id="fp">
+    <div class="hd"><h3>Connect with BDRT</h3><p class="sm">Tell us a little about what you have in mind and we will take it from there.</p></div>
+    <form id="cf" novalidate>
+      <div class="f"><span class="lb" id="tl">I'm reaching out about</span><div class="chips" id="chips" role="radiogroup" aria-labelledby="tl">
+        <label class="chip"><input type="radio" name="topic" value="Business inquiry" checked><span>Business inquiry</span></label>
+        <label class="chip"><input type="radio" name="topic" value="Partnership"><span>Partnership</span></label>
+        <label class="chip"><input type="radio" name="topic" value="VOXA / VOXA House"><span>VOXA / VOXA House</span></label>
+        <label class="chip"><input type="radio" name="topic" value="Something else"><span>Something else</span></label></div></div>
+      <div class="row">
+        <div class="f"><label for="n">Full name</label><input id="n" name="name" autocomplete="name" required><div class="err">Please enter your name.</div></div>
+        <div class="f"><label for="e">Email address</label><input id="e" name="email" type="email" autocomplete="email" required><div class="err">Please enter a valid email address.</div></div>
+      </div>
+      <div class="f"><label for="c">Company (optional)</label><input id="c" name="company" autocomplete="organization"></div>
+      <div class="f"><label for="m">Message</label><textarea id="m" name="message" required></textarea><div class="err">Please add a short message.</div></div>
+      <div class="fmsg" id="fmsg" role="alert">Something went wrong sending your message. Please try again.</div>
+      <button class="btn dk" type="submit"><span>Connect with BDRT</span><b aria-hidden="true">&rarr;</b></button>
+    </form>
+    <div class="done" id="done" role="status"><h3>Thank you.</h3><p id="dmsg">Your message is ready to go.</p><button class="btn line" type="button" id="again">Send another message</button></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="ft"><p class="tl2">A growing ecosystem of businesses, ventures, brands and strategic relationships.</p><a class="up" href="#home" aria-label="Back to top">&uarr;</a></div>
+  <div class="fcols">
+    <div><h4>Navigate</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#businesses">Businesses</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#brands">Our Brands</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>Businesses</h4><ul><li><a href="#businesses">iMERGE Advertising</a></li><li><a href="#businesses">Involia</a></li><li><a href="#businesses">Academic Elements</a></li><li><a href="#brands">VOXA House</a></li><li><a href="#brands">VOXA Brand</a></li></ul></div>
+    <div><h4>Access</h4><ul><li><a href="#client-login">Client Login</a></li><li><a href="#donor-portal">Donor Portal</a></li></ul></div>
+    <div><h4>Connect</h4><ul><li><a href="#contact">Business inquiries</a></li><li><a href="#contact">Partnerships</a></li><li><a href="#future">2027 and beyond</a></li></ul></div>
+  </div>
+  <div class="fwordmark" aria-hidden="true">BDRT</div>
+  <div class="fbase"><span>&copy; <span id="yr">2026</span> BDRT Holdings. All rights reserved.</span><span>Building brands. Creating what's next.</span></div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dt"><button class="x" aria-label="Close">&times;</button><div id="db"></div></dialog>
+
+<script>
+(function(){
+var d=document,b=d.body,h=d.querySelector('header'),bg=d.querySelector('.hero .bg'),bur=d.querySelector('.burger');
+d.getElementById('yr').textContent=new Date().getFullYear();
+// broken images fall back to the dark placeholder, never an empty box
+d.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+// header + subtle hero parallax
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,tick=false;
+function onS(){var y=scrollY;h.classList.toggle('solid',y>40);if(!rm&&y<innerHeight*1.2)bg.style.transform='translate3d(0,'+(y*.12)+'px,0)';tick=false}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onS)}},{passive:true});onS();
+// mobile menu
+function setM(o){b.classList.toggle('menu-open',o);bur.setAttribute('aria-expanded',o);bur.setAttribute('aria-label',o?'Close menu':'Open menu');b.style.overflow=o?'hidden':''}
+bur.addEventListener('click',function(){setM(!b.classList.contains('menu-open'))});
+d.querySelectorAll('.drawer a').forEach(function(a){a.addEventListener('click',function(){setM(false)})});
+addEventListener('keydown',function(e){if(e.key==='Escape')setM(false)});
+addEventListener('resize',function(){if(innerWidth>1100)setM(false)});
+// ecosystem image swap
+var img=d.getElementById('ecoImg'),links=d.querySelectorAll('#ecoList a');
+function show(a){links.forEach(function(l){l.classList.remove('on')});a.classList.add('on');var u='https://images.unsplash.com/'+a.dataset.img+'?auto=format&fit=crop&w=1100&q=70';if(img.getAttribute('src')!==u){img.style.opacity=0;var t=new Image();t.onload=function(){img.src=u;img.style.display='';img.style.opacity=1};t.onerror=function(){img.style.opacity=1};t.src=u}}
+links.forEach(function(a){a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('focus',function(){show(a)})});
+links[0].classList.add('on');
+// contact form. Set FORM_ENDPOINT (e.g. a Formspree URL) to receive messages.
+var FORM_ENDPOINT='';
+var f=d.getElementById('cf'),fp=d.getElementById('fp');
+function chk(el){var f2=el.closest('.f'),v=el.value.trim(),ok=!!v;if(el.type==='email')ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);f2.classList.toggle('bad',!ok);el.setAttribute('aria-invalid',!ok);return ok}
+function setTopic(t){var c=d.getElementById('chips'),r=c.querySelector('input[value="'+t.replace(/"/g,'')+'"]');if(!r){var l=d.createElement('label');l.className='chip';l.innerHTML='<input type="radio" name="topic"><span></span>';l.firstChild.value=t;l.lastChild.textContent=t;c.insertBefore(l,c.firstChild);r=l.firstChild}r.checked=true}
+f.querySelectorAll('[required]').forEach(function(el){el.addEventListener('blur',function(){chk(el)});el.addEventListener('input',function(){if(el.closest('.f').classList.contains('bad'))chk(el)})});
+f.addEventListener('submit',function(e){e.preventDefault();var all=true;f.querySelectorAll('[required]').forEach(function(el){if(!chk(el))all=false});
+ if(!all){f.querySelector('.bad input,.bad textarea').focus();return}
+ var btn=f.querySelector('button[type=submit]'),msg=d.getElementById('fmsg');msg.style.display='none';
+ function done(demo){fp.classList.add('sent');d.getElementById('dmsg').textContent=demo?'Your message is ready to go. This preview is not connected to an inbox yet.':'We have received your message and will be in touch.';d.getElementById('done').querySelector('h3').focus&&0}
+ if(!FORM_ENDPOINT){done(true);return}
+ var data={};new FormData(f).forEach(function(v,k){data[k]=v});btn.disabled=true;
+ fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw 0;done(false)}).catch(function(){msg.style.display='block'}).then(function(){btn.disabled=false})});
+d.getElementById('again').onclick=function(){fp.classList.remove('sent');f.reset();f.querySelector('input').focus()};
+// hero slider
+var sls=d.querySelectorAll('#slides .s'),dd=d.getElementById('slD'),cur=0,timer,paused=rm;
+sls.forEach(function(_,k){var b=d.createElement('button');b.className='dt'+(k?'':' on');b.setAttribute('aria-label','Slide '+(k+1));b.onclick=function(){go(k);rst()};dd.appendChild(b)});
+var dots=dd.children;
+function go(n){sls[cur].classList.remove('on');dots[cur].classList.remove('on');cur=(n+sls.length)%sls.length;sls[cur].classList.add('on');dots[cur].classList.add('on')}
+function rst(){clearInterval(timer);if(!paused)timer=setInterval(function(){go(cur+1)},6500)}
+d.getElementById('slN').onclick=function(){go(cur+1);rst()};
+d.getElementById('slP').onclick=function(){go(cur-1);rst()};
+var tg=d.getElementById('slT');tg.onclick=function(){paused=!paused;tg.innerHTML=paused?'&#9654;':'&#10074;&#10074;';tg.setAttribute('aria-label',paused?'Play slideshow':'Pause slideshow');rst()};
+if(paused)tg.innerHTML='&#9654;';rst();
+// portals: put your real URLs here. Leave empty to show the visual concept panel.
+var PORTALS={client:'',donor:''};
+var dlg=d.getElementById('dlg'),db=d.getElementById('db');
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+dlg.querySelector('.x').onclick=function(){dlg.close()};
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+function openD(html){db.innerHTML=html;dlg.showModal();return db}
+function portal(kind){
+ var name=kind==='client'?'Client Login':'Donor Portal',url=PORTALS[kind];
+ if(url){location.href=url;return}
+ var x=openD('<p class="lbl">BDRT Holdings</p><h3 id="dt">'+name+'</h3><p class="d">'+(kind==='client'?'Sign in to access your projects and documents.':'Sign in to view your giving and program updates.')+'</p><form novalidate><div class="f"><label for="pe">Email</label><input id="pe" type="email" autocomplete="email" required><div class="err">Please enter a valid email address.</div></div><div class="f"><label for="pp">Password</label><input id="pp" type="password" autocomplete="current-password" required><div class="err">Please enter your password.</div></div><button class="btn solid" type="submit">Sign in</button><p class="note">Design concept: sign-in is not connected yet.</p><div class="ok" role="status">Portal sign-in will be available once the BDRT portal is connected.</div></form>');
+ var fm=x.querySelector('form');fm.querySelectorAll('input').forEach(function(el){el.addEventListener('blur',function(){chk(el)})});
+ fm.addEventListener('submit',function(e){e.preventDefault();var a=true;fm.querySelectorAll('input').forEach(function(el){if(!chk(el))a=false});if(a)fm.querySelector('.ok').style.display='block'})}
+d.querySelectorAll('a[href="#client-login"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();setM(false);portal('client')})});
+d.querySelectorAll('a[href="#donor-portal"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();setM(false);portal('donor')})});
+// business / work / brand detail panels
+function info(cat,title,desc){
+ var x=openD('<p class="lbl">'+esc(cat)+'</p><h3 id="dt">'+esc(title)+'</h3><p class="d">'+esc(desc)+'</p><button class="btn solid" type="button">Start a conversation</button>');
+ x.querySelector('button').onclick=function(){setTopic(title);dlg.close();d.getElementById('contact').scrollIntoView({behavior:rm?'auto':'smooth'});setTimeout(function(){d.getElementById('n').focus({preventScroll:true})},700)}}
+links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();info('BDRT ecosystem',a.querySelector('h3').textContent,a.querySelector('p').textContent)})});
+d.querySelectorAll('.item').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();info(a.querySelector('span').textContent,a.querySelector('h3').textContent,'A selected project from BDRT. Full details and case study coming soon.')})});
+d.querySelectorAll('.vcol .btn').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var c=a.closest('.vcol');info('Part of BDRT Holdings',c.querySelector('h3').lastChild.textContent,Array.prototype.map.call(c.querySelectorAll('li'),function(l){return l.textContent}).join(', ')+'.')})});
+})();
+</script>
+</body>
+</html>
